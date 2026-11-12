@@ -5477,9 +5477,9 @@ button.foe:active,button.gim-ab:active,button.prep-m:active,button.prep-row:acti
 /* 11/12 涂鸦手列表：名牌只剩名字一行（字大一号、上下居中）；等级 / 攻击挂在立绘右下角的小牌上（按攻击排序时写攻击） */
 .c4w:has(>.c4-cap) .c4-cap:not(:has(.c4-l2)){display:flex!important;align-items:center;justify-content:center;min-height:0}
 .c4w:has(>.c4-cap) .c4-cap:not(:has(.c4-l2)) b{font-size:15px!important;line-height:1.1!important;padding-left:12%}
-.c4 .c4-lvb{position:absolute;z-index:8;right:6%;bottom:calc(30px + 4%);display:flex;align-items:baseline;gap:1px;padding:2px 6px 3px;background:#120a30e6;border:1.5px solid #fff;border-radius:4px;transform:rotate(-3deg);
-  font:400 15px/1 var(--font-num),var(--font-pop);color:#fff;font-style:normal;letter-spacing:.02em;box-shadow:2px 2px 0 #000a;border-image-source:none}
-.c4 .c4-lvb small{font:900 12px/1 var(--font-pop);color:#ffe066;margin-right:2px}
+.c4 .c4-lvb{position:absolute;z-index:8;right:5%;bottom:calc(26px + 2%);display:flex;align-items:baseline;gap:1px;padding:0;background:none;border-width:0;
+  font:400 14px/1 var(--font-num),var(--font-pop);color:#fff;font-style:normal;letter-spacing:.01em;-webkit-text-stroke:3px #120a30;paint-order:stroke fill;text-shadow:1px 1px 0 #120a30;border-image-source:none}   /* 11/12 制作人「等级太占位置」：去掉底牌，只留描边小字（参照智龙迷城图标角上的 Lv） */
+.c4 .c4-lvb small{font:900 12px/1 var(--font-pop);color:#ffe066;margin-right:1px;-webkit-text-stroke:2.5px #120a30;paint-order:stroke fill}
 </style>
 </head>
 <body>
