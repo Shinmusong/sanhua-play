@@ -1,0 +1,5 @@
+<!doctype html><meta charset=utf-8><style>body{margin:0;background:#222;color:#fff;font:20px sans-serif}button{width:100%;height:120px;font-size:28px}</style>
+<button id=b>copy</button><div id=s></div><script>
+const f=new URLSearchParams(location.search).get('f');
+b.onclick=async()=>{try{const r=await fetch(f);const bl=await r.blob();const png=bl.type=='image/png'?bl:await new Promise(res=>{const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=im.width;c.height=im.height;c.getContext('2d').drawImage(im,0,0);c.toBlob(res,'image/png')};im.src=URL.createObjectURL(bl)});await navigator.clipboard.write([new ClipboardItem({'image/png':png})]);s.textContent='copied '+f}catch(e){s.textContent='ERR '+e}};
+</script>
