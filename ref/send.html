@@ -1,0 +1,5 @@
+<!doctype html><meta charset=utf-8><body><script>
+(async()=>{const q=new URLSearchParams(location.search).get('f').split(',');const out=[];
+for(const f of q){const b=await (await fetch(f)).blob();out.push(await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r([f,fr.result]);fr.readAsDataURL(b)}))}
+(window.opener||parent).postMessage({refs:out},'https://chatgpt.com');document.body.textContent='sent '+out.length;setTimeout(()=>window.close(),800)})();
+</script>
